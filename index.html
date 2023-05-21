@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.css" rel="stylesheet">
+	<link href="./node_modules/docslider/docSlider.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>     
+        body {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color : white;
+			background-color: black;
+			background-repeat: repeat; /* This will tile the image */
+			background-size: cover;
+		}
+
+        .section {
+            text-align: center;
+            padding: 0px;
+			flex-direction: column;
+            font-size: 3vw;
+            height: 100vh; 
+			font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+		.header {
+		}
+
+		.header-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height:100%;
+			padding: 0;
+		}
+
+		.logo {
+			height: 70%;
+			flex-grow: 0; /* Make sure the logo doesn't grow */
+			margin-right: 2vw;
+		}
+
+		.nav_header {
+			display: flex;
+			flex-grow: 1; /* Make the nav grow to take up remaining space */
+			justify-content: space-between; /* Space items equally */
+			align-items: center;
+		}
+
+		.header-button {
+			flex-grow: 0; /* Make sure the button doesn't grow */
+		}
+
+		h1 {
+			margin-right: 10vw;
+		}
+
+		nav a {
+			color:black;
+			font-size:23px;
+			margin:0;
+		}
+
+		.header-button {
+			flex-grow: 0;
+			padding: 10px 20px;
+			background: linear-gradient(to bottom, #ffffff 0%, #d0d0d0 100%); /* Light to dark gradient */
+			border: 1px solid #808080; /* Dark border */
+			box-shadow: inset -2px -2px 0px 0px #808080, inset 2px 2px 0px 0px #fff; /* 3D effect */
+			font-family: "MS Sans Serif", sans-serif; /* Windows 98 style font */
+			font-size : 32px;
+			text-decoration: none;
+			color: black;
+			cursor: pointer;
+			margin-left:10vw;
+			margin-right:2vw;
+		}
+
+		#section1 {
+			display: flex;
+			flex-direction: column;
+			align-items: space-between;
+			justify-content: center;
+			width: 100%;
+			height: 100vh;
+		}
+
+		.textbox {
+			position: relative;
+			display:inline-block;
+            width: 100%;
+			padding: 0vh;
+            text-align: center;
+        }
+
+		.smalltextbox, 
+		.realsmalltextbox {
+			position: relative;
+			display:inline-block;
+            width: 40vw;
+			padding: 0vh;
+            text-align: center;
+			font-size: 0.2em;
+			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			color:#808080
+        }
+
+		#buttons {
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.button-row {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+        @media (max-width: 768px) {
+        .textbox {
+            height: 150px;
+			font-size:18px;
+        }
+
+		.smalltextbox {
+            height: 150px;
+			font-size:15px;
+        }
+
+		.realsmalltextbox {
+            height: 150px;
+			font-size:5px;
+        }
+        }
+
+        .custom-element {
+            height:5px;
+            background-color:orange;
+        }
+
+        .custom-element::before {
+            content: "";
+            position: relative;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 2vh;
+            background-color: orange;
+        }
+
+        .custom-element::after {
+            content: "";
+            position: relative;
+            top: -10px;
+            left: 40%;
+            width: 20%;
+            height: 40px;
+            background-color: orange;
+        }
+
+		.video {
+			padding-left:2vw;
+			height:50%;
+			width:60vw;
+		}
+
+		.image{
+			padding-left:2vw;
+			height:40vh;
+			width:33vw;
+		}
+
+		.image1{
+			padding-left:2vw;
+			height:55vh;
+			width:90vw;
+		}
+
+		.image2{
+			padding-left:2vw;
+			height:55vh;
+			width:50vw;
+		}
+
+		.fixed-icons {
+			position: fixed;
+			top: 7vh;
+			right: 7vw;
+			display: flex;
+			gap: 20px;
+			font-size: 5vw;
+			z-index: 9999;
+		}
+
+		.fixed-icons a {
+			color: white;
+			text-decoration: none;
+		}
+		
+    </style>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+	<title>MUSCLE</title>
+</head>
+
+
+
+<body>
+	<header class="header">
+	</header>
+	<div class="fixed-icons">
+		<a href="www.telegram.co.kr">
+		  <i class="fab fa-telegram"></i>
+		</a>
+		<a href="www.twitter.com">
+		  <i class="fab fa-twitter"></i>
+		</a>
+	</div>
+	<div class = "docSlider">
+		<div class = "section section1">
+            <div class="textbox" id="myTextbox">
+				<p style = "font-weight:500; margin:0px;">RISE ABOVE THE REST</p>
+                <p style = "font-size: 12vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>
+                <div class="custom-element " style="margin-bottom: 3vh;"></div>
+            </div>
+			<iframe class = "video"></iframe>
+        </div>
+        <div class = "section section2">
+            <div class="textbox" id="myTextbox">
+				<p style = "font-weight:500; margin:0px;">WHAT IS</p>
+                <p style = "font-size: 12vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>    
+                <div class="custom-element " style="margin-bottom: 3vh;"></div>
+            </div>
+			<img src = "move.png", class = "image1"></img>
+        </div>
+        <div class = "section section1">
+            <div class="textbox" id="myTextbox">
+				<p style = "font-weight:500; margin:0px;">WHERE TO BUY</p>
+                <p style = "font-size: 12vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>    
+                <div class="custom-element " style="margin-bottom: 3vh;"></div>
+            </div>
+			<div style = "display:flex ; flex-direction: row;">
+				<img src = "cat1.png", class = "image"></img>
+				<a href = "https://uniswap.org/"  ><img src = "us.png" , class = "image"></img> </a>
+				<img src = "cat2.png", class = "image"></img>
+			</div>
+        </div>
+		<div class = "section section4">
+            <div class="textbox" id="myTextbox">
+				<p style = "font-weight:500; margin:0px;">JOIN THE COMMUNITY</p>
+                <p style = "font-size: 10vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>    
+                <div class="custom-element " style="margin-bottom: 3vh;"></div>
+            </div>
+			<div style = "display:flex ; flex-direction: row; width:100vw;">
+				<img src = "tesla.png", class = "image2"></img>
+				
+				<div class="textbox" id="myTextbox" style = "margin-left : 2vw; line-height: 3vh; text-align: left;">
+					<!-- <div class="community-icons" style = "justify-items: center;">
+						<a href="www.telegram.co.kr">
+						  <i class="fab fa-telegram"></i>
+						</a>
+						<a href="www.twitter.com">
+						  <i class="fab fa-twitter"></i>
+						</a>
+					</div> -->
+					<p>CONTRACT ADDRESS: Coming Soon</p>
+					<p>UNISWAP ADDRESS: Coming Soon</p>
+					<div class = "realsmalltextbox" style = "line-height:1vh;">
+						The following statement serves as a disclaimer and clarification regarding $MUSCLE, a meme coin, and its characteristics. It is essential to understand that $MUSCLE holds no financial value and is solely intended for entertainment purposes.
+	$MUSCLE is a cryptocurrency based on a meme or internet culture theme, designed to provide users with a lighthearted and amusing experience within the digital space. As a meme coin, it does not possess any inherent or guaranteed financial worth, and its value may fluctuate significantly or even become obsolete over time.
+	It is crucial to note that investing in cryptocurrencies, including $MUSCLE, carries substantial risks. The cryptocurrency market is highly volatile, subject to sudden and dramatic price swings, and influenced by various factors, including market sentiment, speculation, and external events. Therefore, it is strongly advised not to consider $MUSCLE or any other meme coin as a reliable investment opportunity.
+	Furthermore, this disclaimer emphasizes that the information provided regarding $MUSCLE, including its description, purpose, or potential, is solely for entertainment and educational purposes. The content should not be construed as financial advice or a recommendation to engage in any form of financial or investment activity related to $MUSCLE or any other cryptocurrency.
+	As with any investment or speculative endeavor, it is highly recommended to conduct thorough research, consult with professional financial advisors, and carefully assess the risks and potential outcomes before making any financial decisions. Individuals should also comply with applicable laws, regulations, and guidelines related to cryptocurrencies within their respective jurisdictions.
+	By engaging with or interacting with $MUSCLE, you acknowledge and accept the aforementioned disclaimer, understanding that $MUSCLE is a meme coin with no financial value and is intended solely for entertainment purposes.
+	
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.js"></script>
+	<script>docSlider.init(); </script>
+	<script src="./carousel.js"></script>
+	
+		
+</body>
+</html>
