@@ -2,81 +2,28 @@
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.css" rel="stylesheet">
-	<link href="./node_modules/docslider/docSlider.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>     
+    <link href="https://fonts.cdnfonts.com/css/renegade-pursuit" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+	<style>     
         body {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: 'Renegade Pursuit', sans-serif;
             color : white;
 			background-color: black;
 			background-repeat: repeat; /* This will tile the image */
 			background-size: cover;
+			font-size: 64px;
 		}
 
         .section {
             text-align: center;
             padding: 0px;
 			flex-direction: column;
-            font-size: 3vw;
             height: 100vh; 
-			font-weight: 400;
             display: flex;
             justify-content: center;
             align-items: center; 
         }
-
-		.header {
-		}
-
-		.header-content {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			height:100%;
-			padding: 0;
-		}
-
-		.logo {
-			height: 70%;
-			flex-grow: 0; /* Make sure the logo doesn't grow */
-			margin-right: 2vw;
-		}
-
-		.nav_header {
-			display: flex;
-			flex-grow: 1; /* Make the nav grow to take up remaining space */
-			justify-content: space-between; /* Space items equally */
-			align-items: center;
-		}
-
-		.header-button {
-			flex-grow: 0; /* Make sure the button doesn't grow */
-		}
-
-		h1 {
-			margin-right: 10vw;
-		}
-
-		nav a {
-			color:black;
-			font-size:23px;
-			margin:0;
-		}
-
-		.header-button {
-			flex-grow: 0;
-			padding: 10px 20px;
-			background: linear-gradient(to bottom, #ffffff 0%, #d0d0d0 100%); /* Light to dark gradient */
-			border: 1px solid #808080; /* Dark border */
-			box-shadow: inset -2px -2px 0px 0px #808080, inset 2px 2px 0px 0px #fff; /* 3D effect */
-			font-family: "MS Sans Serif", sans-serif; /* Windows 98 style font */
-			font-size : 32px;
-			text-decoration: none;
-			color: black;
-			cursor: pointer;
-			margin-left:10vw;
-			margin-right:2vw;
-		}
 
 		#section1 {
 			display: flex;
@@ -121,22 +68,21 @@
 			justify-content: space-between;
 		}
 
-        @media (max-width: 768px) {
-        .textbox {
-            height: 150px;
-			font-size:18px;
-        }
+        @media screen and (max-width: 1300px) {
+	
+			body {
+				font-size: 32px;
+			}
+		}
 
-		.smalltextbox {
-            height: 150px;
-			font-size:15px;
-        }
+		@media screen and (max-width: 700px) {
+	
+			body {
+				font-size: 16px;
+			}
+		}
 
-		.realsmalltextbox {
-            height: 150px;
-			font-size:5px;
-        }
-        }
+
 
         .custom-element {
             height:5px;
@@ -165,20 +111,21 @@
 
 		.video {
 			padding-left:2vw;
-			height:50%;
-			width:60vw;
+			height:50vh;
+			width:90vw;
+			border:0px;
 		}
 
 		.image{
 			padding-left:2vw;
-			height:40vh;
+			height:30vw;
 			width:33vw;
 		}
 
 		.image1{
 			padding-left:2vw;
 			height:55vh;
-			width:90vw;
+			width:80vw;
 		}
 
 		.image2{
@@ -189,8 +136,8 @@
 
 		.fixed-icons {
 			position: fixed;
-			top: 7vh;
-			right: 7vw;
+			top: 3vh;
+			right: 5vw;
 			display: flex;
 			gap: 20px;
 			font-size: 5vw;
@@ -223,42 +170,41 @@
 	<div class = "docSlider">
 		<div class = "section section1">
             <div class="textbox" id="myTextbox">
-				<p style = "font-weight:500; margin:0px;">RISE ABOVE THE REST</p>
-                <p style = "font-size: 12vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>
+				<p style = "font-family : 'Space Grotesk' ; font-weight:500; margin:0px;">RISE ABOVE THE REST</p>
+                <p style = "font-size: 5em; font-weight:600 ;  margin: 0px"> MUSCLE </p>
                 <div class="custom-element " style="margin-bottom: 3vh;"></div>
             </div>
-			<iframe class = "video"></iframe>
+			<iframe src = "video.mp4" class = "video" controls autoplay muted></iframe>
         </div>
         <div class = "section section2">
             <div class="textbox" id="myTextbox">
-				<p style = "font-weight:500; margin:0px;">WHAT IS</p>
-                <p style = "font-size: 12vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>    
+				<p style = "font-family : 'Space Grotesk' ;font-weight:500; margin:0px;">WHAT IS</p>
+                <p style = "font-size: 5em; font-weight:500 ;  margin: 0px"> MUSCLE </p>    
                 <div class="custom-element " style="margin-bottom: 3vh;"></div>
             </div>
 			<img src = "move.png", class = "image1"></img>
         </div>
         <div class = "section section1">
             <div class="textbox" id="myTextbox">
-				<p style = "font-weight:500; margin:0px;">WHERE TO BUY</p>
-                <p style = "font-size: 12vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>    
+				<p style = "font-family : 'Space Grotesk' ;font-weight:500; margin:0px;">WHERE TO BUY</p>
+                <p style = "font-size: 5em; font-weight:500 ;  margin: 0px"> MUSCLE </p>    
                 <div class="custom-element " style="margin-bottom: 3vh;"></div>
             </div>
 			<div style = "display:flex ; flex-direction: row;">
 				<img src = "cat1.png", class = "image"></img>
-				<a href = "https://uniswap.org/"  ><img src = "us.png" , class = "image"></img> </a>
+				<a href = "https://uniswap.org/"  ><img src = "pcs.png" , class = "image"></img> </a>
 				<img src = "cat2.png", class = "image"></img>
 			</div>
         </div>
 		<div class = "section section4">
             <div class="textbox" id="myTextbox">
-				<p style = "font-weight:500; margin:0px;">JOIN THE COMMUNITY</p>
-                <p style = "font-size: 10vw; font-weight:500 ;  margin: 0px"> M U S C L E </p>    
+				<p style = "font-family : 'Space Grotesk' ;font-weight:500; margin:0px;">JOIN THE COMMUNITY</p>
+                <p style = "font-size: 5em; font-weight:500 ;  margin: 0px"> MUSCLE </p>    
                 <div class="custom-element " style="margin-bottom: 3vh;"></div>
             </div>
 			<div style = "display:flex ; flex-direction: row; width:100vw;">
 				<img src = "tesla.png", class = "image2"></img>
-				
-				<div class="textbox" id="myTextbox" style = "margin-left : 2vw; line-height: 3vh; text-align: left;">
+				<div class="textbox" id="myTextbox" style = "margin-left : 2vw; line-height: 4vh; text-align: left;">
 					<!-- <div class="community-icons" style = "justify-items: center;">
 						<a href="www.telegram.co.kr">
 						  <i class="fab fa-telegram"></i>
@@ -285,7 +231,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/docslider@3.0.1/docSlider.min.js"></script>
 	<script>docSlider.init(); </script>
-	<script src="./carousel.js"></script>
 	
 		
 </body>
