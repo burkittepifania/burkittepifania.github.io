@@ -12,7 +12,7 @@
 			background-color: black;
 			background-repeat: repeat; /* This will tile the image */
 			background-size: cover;
-			font-size: 64px;
+			font-size: calc(16px + 1vw);
 		}
 
         .section {
@@ -35,14 +35,21 @@
 		}
 
 		.textbox {
-			position: relative;
+			position: absolute;
 			display:inline-block;
             width: 100%;
-			padding: 0vh;
+			top: 5vh; 
+			padding:0px;
             text-align: center;
         }
 
-		.smalltextbox, 
+		.smalltextbox {
+			position : relative;
+			line-height: 4vh; 
+			text-align: left;
+			top: 30vh;
+		}
+
 		.realsmalltextbox {
 			position: relative;
 			display:inline-block;
@@ -67,20 +74,6 @@
 			display: flex;
 			justify-content: space-between;
 		}
-
-        @media screen and (max-width: 1300px) {
-			body {
-				font-size: 32px;
-			}
-		}
-
-		@media screen and (max-width: 700px) {
-			body {
-				font-size: 16px;
-			}
-		}
-
-
 
         .custom-element {
             height:5px;
@@ -108,28 +101,45 @@
         }
 
 		.video {
+			position: absolute;
 			height:40vh;
 			width:90vw;
 			border:0px;
+			padding-left:2vh;
+			top:50vh;
+		}
+
+		.img-box{
+			position:absolute;
+			display:flex ; 
+			flex-direction: row;
+			bottom:20vh;
 		}
 
 		.image{
+			position:relative;
 			padding-left:2vw;
-			height:25vw;
-			width:30vw;
+			max-height: auto;
+			max-width: 20vw;
 		}
 
 		.image1{
+			position:absolute;
 			padding-left:2vw;
 			height:55vh;
-			width:80vw;
+			width:800px;
+			bottom:5vh;
 		}
 
 		.image2{
-			padding-left:2vw;
-			height:55vh;
-			width:50vw;
+			position: relative;
+			left:5vw;
+			height: auto;
+			width: 30vw;
+			top:30vh;
+			margin-right:20px;
 		}
+
 
 		.fixed-icons {
 			position: fixed;
@@ -146,6 +156,86 @@
 			text-decoration: none;
 		}
 		
+		@media screen and (max-width: 1350px) {
+			body {
+				font-size: calc(16px+1vw);
+			}
+
+
+			.image {
+				max-height:350px;
+				max-width:350px;
+				bottom:5vh;
+			}
+
+			.image2{
+				left:0vw;
+				position:relative;
+				height: 500px;
+				width: 500px;
+				bottom:20vh;
+			}
+
+			.smalltextbox {
+				position : relative;
+				line-height: 4vh; 
+				text-align: left;
+				bottom:25vh;
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			.textbox {
+				top: 10vh; 
+        	}
+			body {
+				font-size: calc(16px+1vw);
+			}
+
+			.video {
+				top:40vh;
+			}
+
+			.image1 {
+				height:45vh;
+				width:80vw;
+				bottom: 20vh;
+			}
+
+			.image {
+				max-height:35vh;
+				max-width:35vw;
+				margin-bottom:3vh;
+				bottom:0vh;
+			}
+
+			.img-box{
+				display:flex ; 
+				flex-direction: column;
+				bottom:0vh;
+			}
+
+			.image2{
+				position:absolute;
+				left:2vw;
+				height: 50vh;
+				width: auto;
+				top:20vh;
+			}
+
+			.smalltextbox {
+				position : absolute;
+				left: 25vw; 
+				line-height: 2vh; 
+				text-align: center;
+				top:70vh;
+			}
+
+			.realsmalltextbox{
+				display:none;
+			}
+		}
+
     </style>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 	<title>MUSCLE</title>
@@ -177,9 +267,9 @@
             <div class="textbox" id="myTextbox">
 				<p style = "font-family : 'Space Grotesk' ;font-weight:500; margin:0px;">WHAT IS</p>
                 <p style = "font-size: 5em; font-weight:500 ;  margin: 0px"> MUSCLE </p>    
-                <div class="custom-element " style="margin-bottom: 3vh;"></div>
+                <div class="custom-element " style="margin-bottom: 3vh;">	</div>
             </div>
-			<img src = "move.png", class = "image1"></img>
+			<img src = "move.png", class = "image1"></img>	
         </div>
         <div class = "section section1">
             <div class="textbox" id="myTextbox">
@@ -187,9 +277,9 @@
                 <p style = "font-size: 5em; font-weight:500 ;  margin: 0px"> MUSCLE </p>    
                 <div class="custom-element " style="margin-bottom: 3vh;"></div>
             </div>
-			<div style = "display:flex ; flex-direction: row;">
+			<div class = "img-box">
 				<img src = "cat1.png", class = "image"></img>
-				<a href = "https://uniswap.org/"  ><img src = "pcs.png" , class = "image"></img> </a>
+				<a href = "https://uniswap.org/" class = "img" ><img src = "pcs.png" , class = "image"></img> </a>
 				<img src = "cat2.png", class = "image"></img>
 			</div>
         </div>
@@ -197,11 +287,11 @@
             <div class="textbox" id="myTextbox">
 				<p style = "font-family : 'Space Grotesk' ;font-weight:500; margin:0px;">JOIN THE COMMUNITY</p>
                 <p style = "font-size: 5em; font-weight:500 ;  margin: 0px"> MUSCLE </p>    
-                <div class="custom-element " style="margin-bottom: 3vh;"></div>
+                <div class="custom-element " style="margin-bottom: 5vh;"></div>
             </div>
-			<div style = "display:flex ; flex-direction: row; width:100vw;">
+			<div style = "position: absolute; display:flex ; flex-direction: row; width:100vw; justify-content: space-between; top:10vh; ">
 				<img src = "tesla.png", class = "image2"></img>
-				<div class="textbox" id="myTextbox" style = "margin-left : 2vw; line-height: 4vh; text-align: left;">
+				<div class="smalltextbox">
 					<!-- <div class="community-icons" style = "justify-items: center;">
 						<a href="www.telegram.co.kr">
 						  <i class="fab fa-telegram"></i>
@@ -210,16 +300,24 @@
 						  <i class="fab fa-twitter"></i>
 						</a>
 					</div> -->
-					<p>CONTRACT ADDRESS: Coming Soon</p>
-					<p>UNISWAP ADDRESS: Coming Soon</p>
-					<div class = "realsmalltextbox" style = "line-height:1vh;">
-						The following statement serves as a disclaimer and clarification regarding $MUSCLE, a meme coin, and its characteristics. It is essential to understand that $MUSCLE holds no financial value and is solely intended for entertainment purposes.
-	$MUSCLE is a cryptocurrency based on a meme or internet culture theme, designed to provide users with a lighthearted and amusing experience within the digital space. As a meme coin, it does not possess any inherent or guaranteed financial worth, and its value may fluctuate significantly or even become obsolete over time.
-	It is crucial to note that investing in cryptocurrencies, including $MUSCLE, carries substantial risks. The cryptocurrency market is highly volatile, subject to sudden and dramatic price swings, and influenced by various factors, including market sentiment, speculation, and external events. Therefore, it is strongly advised not to consider $MUSCLE or any other meme coin as a reliable investment opportunity.
-	Furthermore, this disclaimer emphasizes that the information provided regarding $MUSCLE, including its description, purpose, or potential, is solely for entertainment and educational purposes. The content should not be construed as financial advice or a recommendation to engage in any form of financial or investment activity related to $MUSCLE or any other cryptocurrency.
-	As with any investment or speculative endeavor, it is highly recommended to conduct thorough research, consult with professional financial advisors, and carefully assess the risks and potential outcomes before making any financial decisions. Individuals should also comply with applicable laws, regulations, and guidelines related to cryptocurrencies within their respective jurisdictions.
-	By engaging with or interacting with $MUSCLE, you acknowledge and accept the aforementioned disclaimer, understanding that $MUSCLE is a meme coin with no financial value and is intended solely for entertainment purposes.
-	
+					<p>CONTRACT ADDRESS: <br> Coming Soon</p>
+					<p>UNISWAP ADDRESS: <br> Coming Soon</p>
+					<div class = "realsmalltextbox" style = "line-height:1vh; text-align:left;">
+						The following statement serves as a disclaimer and clarification regarding $MUSCLE, a meme coin, and its characteristics. <br>
+						It is essential to understand that $MUSCLE holds no financial value and is solely intended for entertainment purposes.<br>
+						$MUSCLE is a cryptocurrency based on a meme or internet culture theme, designed to provide users with a lighthearted and <br>
+						amusing experience within the digital space. As a meme coin, it does not possess any inherent or guaranteed financial worth, <br>
+						and its value may fluctuate significantly or even become obsolete over time. It is crucial to note that investing in cryptocurrencies, <br>
+						including $MUSCLE, carries substantial risks. The cryptocurrency market is highly volatile, subject to sudden and dramatic price swings, <br>
+						and influenced by various factors, including market sentiment, speculation, and external events. Therefore, it is strongly advised not to <br>
+						consider $MUSCLE or any other meme coin as a reliable investment opportunity.Furthermore, this disclaimer emphasizes that the information <br>
+						provided regarding $MUSCLE, including its description, purpose, or potential, is solely for entertainment and educational purposes. The content <br>
+						should not be construed as financial advice or a recommendation to engage in any form of financial or investment activity related to $MUSCLE or <br>
+						any other cryptocurrency.As with any investment or speculative endeavor, it is highly recommended to conduct thorough research, consult with professional <br>
+						financial advisors, and carefully assess the risks and potential outcomes before making any financial decisions. <br>
+						Individuals should also comply with applicable laws, regulations, and guidelines related to cryptocurrencies within their respective jurisdictions.<br>
+						By engaging with or interacting with $MUSCLE, you acknowledge and accept the aforementioned disclaimer, understanding that $MUSCLE is a meme coin with <br>
+						no financial value and is intended solely for entertainment purposes.
 					</div>
 				</div>
 			</div>
